@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     getData() {
-      axios.get('./static/data.json?group=' + this.group) // 真实环境中，后端会根据参数group返回新的图片数组，这里我用一个惊呆json文件模拟
+      axios.get('./static/data.json?group=' + this.group)
         .then(res => {
           this.imgsArr = this.imgsArr.concat(res.data)
           this.group++
